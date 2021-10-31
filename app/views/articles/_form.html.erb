@@ -1,0 +1,18 @@
+<%= form_with model: article do |form| %>
+<div>
+	<%= form.label :author %><br>
+	<%= form.text_field :author %>
+</div>
+
+<div>
+	<%= form.label :reviewer %><br>
+	<%= form.text_field :reviwer %>
+</div>
+<div>
+	<%= form.label :printed_on %><br>
+	<%= form.text_field :prined_on %>
+</div>		
+<div>
+	<%= form.submit %>
+</div>
+<% end %>

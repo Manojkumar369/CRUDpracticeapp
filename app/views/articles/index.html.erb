@@ -1,0 +1,12 @@
+<h1>Articles index</h1>
+<% @article.each do |article| %>
+<a href="/articles/<%= article.id %>"><h2>article id:<%= article.id %></h2>
+	<h2>author : <%= article.author %></h2>
+		<%= puts " "%>
+	<h3>reviewer :<%= article.reviwer %></h3>
+		<%= puts " "%>
+	<h3>printed_on :<%= article.prined_on%></h3>
+<% end%>
+
+<a href="/articles/new">Add New Article</a>
+<p>aaaaaaaaa</p>

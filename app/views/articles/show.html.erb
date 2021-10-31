@@ -1,0 +1,9 @@
+<h2>Author is :<%= @article.author %></h2>
+<h2>Reviewer is :<%= @article.reviwer %></h2>
+<h2>Printed on :<%= @article.prined_on %></h2>
+
+<a href="/articles/<%= @article.id %>/edit">Edit</a>
+
+<li><%= link_to "Delete", article_path(@article),
+							method: :delete, 
+							data: { confirm: "Are you sure?" }%> </li>

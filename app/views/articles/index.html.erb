@@ -21,7 +21,7 @@
 			<td><%= article.prined_on%></td>
 			<td><a href="/articles/<%= article.id %>">Show</a></td>
 			<td><a href="/articles/<%= article.id %>/edit">Edit</a></td>
-			<td><%= link_to "Delete", article_path(@article),
+			<td><%= link_to "Destroy", article_path(@article),
 								method: :delete, 
 								data: { confirm: "Are you sure?" }%></td>
 		</tr>

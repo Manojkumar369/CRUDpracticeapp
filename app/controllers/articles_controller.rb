@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def home
+
+  end
+
   def index
     @article=Article.all
   end
@@ -33,14 +37,16 @@ class ArticlesController < ApplicationController
     end
   end
 
-  private 
-  def article_params
-    params.require(:article).permit(:author, :reviwer, :prined_on)
-  end
-
   def destroy
     @article=Article.find(params[:id])
     @article.destroy
     redirect_to root_path
   end
+
+  private 
+  def article_params
+    params.require(:article).permit(:author, :reviwer, :prined_on)
+  end
+
+  
 end

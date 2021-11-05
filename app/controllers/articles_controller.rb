@@ -48,5 +48,8 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:author, :reviwer, :prined_on)
   end
 
+   
+
+
   
 end

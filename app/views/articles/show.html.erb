@@ -8,3 +8,19 @@
 <li><%= link_to "Delete", article_path(@article),
 							method: :delete, 
 							data: { confirm: "Are you sure?" }%> </li>
+<h1>Adding comemnts</h1>
+
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+  <%end%>

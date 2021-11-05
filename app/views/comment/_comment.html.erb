@@ -1,0 +1,22 @@
+
+  
+   <% comments.each do |comment| %>
+     <p>
+        <strong>ID</strong>
+        <%= comment.id %>
+      </p>
+      <p>
+        <strong>Name:</strong>
+        <%= comment.name %>
+      </p>
+      <p>
+        <strong>Description</strong>
+        <%= comment.description %>
+      </p>
+
+
+
+      <li><%= link_to 'Destroy Comment', [comment.article, comment],
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %><li>
+    <% end %>

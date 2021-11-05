@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
 
   end
 
+  def cantact_us
+
+  end
+
   def index
     @article=Article.all
   end

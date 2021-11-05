@@ -24,3 +24,7 @@
   </p>
 
   <%end%>
+
+     	
+<h1>List of comments for Article <%= @article.author %></h1>
+<%= render "comment/comment", comments: @article.comments if @article.comments.present? %>

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # get "articles/:id" ,to: "articles#show"
 
   # root 'articles#index'
-  root "articles#index"
+  root "articles#home"
+
+  get "/home/profile", to: "home#profile"
 
  get '/home' ,to: 'articles#home'
   resources :articles do

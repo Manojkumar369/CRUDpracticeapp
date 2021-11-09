@@ -18,5 +18,16 @@ module Practiceapp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+       address:              'smtp.gmail.com',
+       port:                 587,
+       domain:               'example.com',
+       user_name:            'k.manojkumar699@gmail.com',
+       password:             'K_manoj369',
+       authentication:       'plain',
+       enable_starttls_auto: true  
+    }
+
   end
 end

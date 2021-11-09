@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def index
     @article=Article.all
+    redirect_to root_path if !current_user 
   end
 
   def show
